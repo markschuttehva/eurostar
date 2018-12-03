@@ -13,9 +13,11 @@ https://www.youtube.com/watch?v=rgUp302f_lY
 <body>
     <!-- de navigatie -->
 
+
     <nav class="navbar">
+        <img src="images/menu.png" alt="">
         <p>Eurostar verhalen</p>
-        <ul>
+        <!--        <ul>
             <li><a href="#">Genre <img src="images/arrow.png" class="arrow" alt=""></a>
                 <form action="" id="genre" name="genre">
                     <ul>
@@ -51,13 +53,76 @@ https://www.youtube.com/watch?v=rgUp302f_lY
             <li><a href="">Favorieten</a></li>
             <li><a href="">Settings</a></li>
             <li><a href="">Log-uit</a></li>
-        </ul>
+        </ul> -->
     </nav>
+
+    <section>
+        <form action="" id="genre" name="genre">
+            <fieldset>
+                <center>
+                    <h3>Zoek een verhaal</h3>
+                </center>
+                <div class="tab">
+                    <button class="tablinks" autofocus onclick="zoeken(event, 'Genre')">Genre</button>
+                    <button class="tablinks" onclick="zoeken(event, 'Filter')">Filters</button>
+                </div>
+                <div id="Genre" class="tabcontent">
+                    <fieldset>
+                        <legend>Genre </legend>
+                        <ul>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" class="checkbox" name="Gedeprimeerd" checked>Gedeprimeerd</label></li>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Verliefd" checked>Verliefd</label></li>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Hoopvol" checked>Hoopvol</label></li>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Druk" checked>Druk</label></li>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Boos" checked>Boos</label></li>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Jaloers" checked>Jaloers</label></li>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Rustig" checked>Rustig</label></li>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Energiek" checked>Energiek</label></li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Leesduur </legend>
+                        <p>Tijd:</p>
+                        <input type="range" name="ageInputName" id="ageInputId" value="24" min="1" step="1" max="20" oninput="ageOutputId.value = ageInputId.value + ' minuten'">
+                        <output name="ageOutputName" id="ageOutputId"></output>
+
+                    </fieldset>
+                    <fieldset>
+                        <legend>Sorteren op </legend>
+                        <input type="radio" id="populair" name="sort" value="populair" checked>
+                        <label for="populair">Populair</label>
+                        <input type="radio" id="tijdkort" name="sort" value="tijdkort"><label for="tijdkort">Tijd kort</label>
+                        <input type="radio" id="tijdlang" name="sort" value="tijdlang"><label for="tijdlang">Tijd lang</label>
+                        <input type="radio" id="rating" name="sort" value="rating"><label for="rating">Rating</label>
+                    </fieldset>
+                </div>
+
+                <div id="Filter" class="tabcontent" style="display: none;">
+                    <fieldset>
+                        <legend>Filters </legend>
+                        <ul>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" class="checkbox" name="Gedeprimeerd" checked>Gedeprimeerd</label></li>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Verliefd" checked>Verliefd</label></li>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Hoopvol" checked>Hoopvol</label></li>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Druk" checked>Druk</label></li>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Boos" checked>Boos</label></li>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Jaloers" checked>Jaloers</label></li>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Rustig" checked>Rustig</label></li>
+                            <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Energiek" checked>Energiek</label></li>
+                        </ul>
+                    </fieldset><input type="submit" name="button" class="nietzichtbaar" value="Submit">
+                </div>
+            </fieldset>
+        </form>
+    </section>
 
     <h1 id="results">Resultaat</h1>
     <main>
+
         <ul name="Gedeprimeerd">
-            <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
+            <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg">
+                <p>tekst</p>
+            </li>
             <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
             <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
             <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
@@ -122,13 +187,36 @@ https://www.youtube.com/watch?v=rgUp302f_lY
 
                     document.getElementById("results").textContent = "Resultaat" + textresultaat;
                     var aantal = s.split(' ').length;
-                    if(aantal == 8){
+                    if (aantal == 8) {
                         document.getElementById("results").textContent = "Alle verhalen";
                     }
                 }
             }
         }
         resultaten();
+
+        
+        function zoeken(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
 
     </script>
 </body>
