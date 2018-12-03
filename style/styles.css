@@ -82,14 +82,90 @@ label {
 
 h1 {
     margin: 1%;
+    font-size: x-large;
+    margin-bottom: 5%;
 }
 
 main ul li {
-      list-style: none;
-  display: inline;
+    list-style: none;
+    display: inline;
     margin: auto;
 }
 
 main ul li img {
-    width: 15%;
+    width: 100%;
+}
+
+nav img {
+    width: 50px;
+    float: left;
+}
+
+body section {
+    background-color: #24B5C9;
+    padding: 3% 0% 3% 0%;
+}
+
+section fieldset {
+    background-color: #06183D;
+    margin: 0% 3% 2% 3%;
+    color: white;
+    border-radius: 5px;
+}
+
+li {
+    list-style: none;
+}
+
+section form fieldset ul {
+    display: grid;
+}
+
+h3 {
+    margin: 5% 0% 5% 0%;
+}
+
+.tab {
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    width: 50%;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+    width: 50%;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #06183D;
+    color: white;
+    width: 50%;
+     text-decoration: underline #eecd4a;;
+}
+
+/* Style the tab content */
+.tabcontent {
+    padding: 6px 12px;
+
+}
+
+section form fieldset div fieldset label{
+    display: contents;
+}
+
+output {
+    display: inherit;
 }
