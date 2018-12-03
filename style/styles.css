@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+}
+
+/*navigatie*/
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: #06183d;
+}
+
+nav p {
+    color: #eecd4a;
+    font-size: 24px;
+    line-height: 55px;
+    font-family: fantasy;
+    float: left;
+    padding: 0px 20px;
+}
+
+nav ul {
+    float: left;
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    color: #eecd4a;
+    font-size: 14px;
+    font-family: fantasy;
+    padding: 22px 14px;
+    text-decoration: none;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #06183d;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li label {
+    display: inline-flex;
+    padding: 15px 10px;
+    color: #eecd4a;
+}
+
+nav ul li ul li label input {
+    margin-right: 10px;
+}
+
+nav ul li ul li:hover {
+    background-color: #E6E6E7;
+    width: 100%;
+}
+
+label {
+    display: block;
+}
+
+.nietzichtbaar {
+    display: none;
+}
+
+.arrow {
+    width: 20px;
+}
+
+h1 {
+    margin: 1%;
+}
+
+main ul li {
+      list-style: none;
+  display: inline;
+    margin: auto;
+}
+
+main ul li img {
+    width: 15%;
+}

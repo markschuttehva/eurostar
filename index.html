@@ -1,0 +1,136 @@
+<html>
+<!--
+links: 
+https://www.youtube.com/watch?v=rgUp302f_lY
+  -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Verhalen Eurostar</title>
+    <link rel="stylesheet" type="text/css" href="style/styles.css">
+</head>
+
+<body>
+    <!-- de navigatie -->
+
+    <nav class="navbar">
+        <p>Eurostar verhalen</p>
+        <ul>
+            <li><a href="#">Genre <img src="images/arrow.png" class="arrow" alt=""></a>
+                <form action="" id="genre" name="genre">
+                    <ul>
+                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" class="checkbox" name="Gedeprimeerd" checked>Gedeprimeerd</label></li>
+                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Verliefd" checked>Verliefd</label></li>
+                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Hoopvol" checked>Hoopvol</label></li>
+                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Druk" checked>Druk</label></li>
+                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Boos" checked>Boos</label></li>
+                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Jaloers" checked>Jaloers</label></li>
+                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Rustig" checked>Rustig</label></li>
+                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Energiek" checked>Energiek</label></li>
+                    </ul>
+                    <input type="submit" name="button" class="nietzichtbaar" value="Submit">
+                </form>
+            </li>
+            <li><a href="#">Filters <img src="images/arrow.png" class="arrow" alt=""></a>
+                <form action="" name="genre">
+                    <ul>
+                        <li><label><input type="checkbox" id="checkbox" name="Gedeprimeerd">Gedeprimeerd</label></li>
+                        <li><label><input type="checkbox" id="checkbox" name="Verliefd">Verliefd</label></li>
+                        <li><label><input type="checkbox" id="checkbox" name="Hoopvol">Hoopvol</label></li>
+                        <li><label><input type="checkbox" id="checkbox" name="Druk">Druk</label></li>
+                        <li><label><input type="checkbox" id="checkbox" name="Boos">Boos</label></li>
+                        <li><label><input type="checkbox" id="checkbox" name="Jaloers">Jaloers</label></li>
+                        <li><label><input type="checkbox" id="checkbox" name="Rustig">Rustig</label></li>
+                        <li><label><input type="checkbox" id="checkbox" name="Energiek">Energiek</label></li>
+                    </ul>
+                    <input type="submit" name="button" class="nietzichtbaar" value="Submit">
+                </form>
+            </li>
+            <li><a href="">Verdergaan</a></li>
+            <li><a href="">Gedownload</a></li>
+            <li><a href="">Favorieten</a></li>
+            <li><a href="">Settings</a></li>
+            <li><a href="">Log-uit</a></li>
+        </ul>
+    </nav>
+
+    <h1 id="results">Resultaat</h1>
+    <main>
+        <ul name="Gedeprimeerd">
+            <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
+            <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
+            <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
+            <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
+            <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
+            <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
+        </ul>
+        <ul name="Verliefd">
+            <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
+            <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
+            <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
+            <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
+            <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
+            <li><img src="http://images.sciencedaily.com/2012/05/120531112353-thumb.jpg"></li>
+        </ul>
+    </main>
+
+
+
+    <script>
+        function resultaten() {
+
+            /* roept functie op vanuit javascript
+            maak een functie waarmee je door de checkboxes loopt
+            maak een functie waarmee je kunt zien welke checkboxes aan staan            
+            toon het resultaat */
+
+
+            var inputGedeprimeerd = document.querySelector("input[name='Gedeprimeerd']");
+            var inputVerliefd = document.querySelector("input[name='Verliefd']");
+            var inputHoopvol = document.querySelector("input[name='Hoopvol']");
+            var inputDruk = document.querySelector("input[name='Druk']");
+            var inputBoos = document.querySelector("input[name='Boos']");
+            var inputJaloers = document.querySelector("input[name='Jaloers']");
+            var inputRustig = document.querySelector("input[name='Rustig']");
+            var inputEnergiek = document.querySelector("input[name='Energiek']");
+            //Array van de labels
+            var textresultaat = "";
+            var checkboxes = [inputGedeprimeerd, inputVerliefd, inputHoopvol, inputDruk, inputBoos, inputJaloers, inputRustig, inputEnergiek];
+
+            //            console.log("gedeprimeerd?",inputGedeprimeerd.checked, inputGedeprimeerd.name);
+            //            console.log("verliefd?",inputVerliefd.checked, inputVerliefd.name);
+            //            console.log("hoopvol?",inputHoopvol.checked, inputHoopvol.name);
+            //            console.log("druk?",inputDruk.checked, inputDruk.name);
+            //            console.log("boos?",inputBoos.checked, inputBoos.name);
+            //            console.log("jaloers?",inputJaloers.checked, inputJaloers.name);
+            //            console.log("rustig?",inputRustig.checked, inputRustig.name);
+            //            console.log("energiek?",inputEnergiek.checked, inputEnergiek.name);
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                // console.log(checkboxes[i].name);
+                if (checkboxes[i].checked == true) {
+                    //console.log(checkboxes[i].name);
+                    textresultaat += " " + checkboxes[i].name + ", ";
+                    console.log(textresultaat);
+
+                    s = textresultaat;
+                    s = s.replace(/(^\s*)|(\s*$)/gi, "");
+                    s = s.replace(/[ ]{2,}/gi, " ");
+                    s = s.replace(/\n /, "\n");
+                    //document.getElementById("wordcount").value = s.split(' ').length;
+                    console.log(s.split(' ').length);
+
+                    document.getElementById("results").textContent = "Resultaat" + textresultaat;
+                    var aantal = s.split(' ').length;
+                    if(aantal == 8){
+                        document.getElementById("results").textContent = "Alle verhalen";
+                    }
+                }
+            }
+        }
+        resultaten();
+
+    </script>
+</body>
+
+</html>
