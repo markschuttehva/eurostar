@@ -1,3 +1,34 @@
+@font-face {
+    font-family: "test1";
+    src: url("/fonts/aspw-hv.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "test2";
+    src: url("/fonts/aspw-lt.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "test3";
+    src: url("/fonts/aspw-rg.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "test4";
+    src: url("/fonts/pemw-lt.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "test5";
+    src: url("/fonts/pemw-md.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "test6";
+    src: url("/fonts/pemw-rg.woff2") format("woff2");
+}
+    
+
 * {
     margin: 0;
     padding: 0;
@@ -9,32 +40,60 @@ body {
 
 /*navigatie*/
 
-nav {
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js 
+ voor het hamburger menu dat ze ook gebruiken op de eurostar pagina*/
+
+.container {
+    grid-template-columns: 5fr 0fr;
+    grid-gap: 0;
+    display: inline-block;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    padding-top: 1em;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 0em 1em 0.35em 1em;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+header {
     width: 100%;
     height: 60px;
     background-color: #06183d;
 }
 
-nav p {
+header p {
     color: #eecd4a;
     font-size: 24px;
-    line-height: 55px;
     font-family: fantasy;
-    float: left;
-    padding: 0px 20px;
+    display: inline-block;
+    grid-row: 2 / 2;
+    grid-column: 2 / 2;
+    margin-bottom: -1.5em;
 }
 
-nav ul {
+header ul {
     float: left;
 }
 
-nav ul li {
+header ul li {
     float: left;
     list-style: none;
     position: relative;
 }
 
-nav ul li a {
+header ul li a {
     display: block;
     color: #eecd4a;
     font-size: 14px;
@@ -43,27 +102,27 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li ul {
+header ul li ul {
     display: none;
     position: absolute;
     background-color: #06183d;
 }
 
-nav ul li:hover ul {
+header ul li:hover ul {
     display: block;
 }
 
-nav ul li ul li label {
+header ul li ul li label {
     display: inline-flex;
     padding: 15px 10px;
     color: #eecd4a;
 }
 
-nav ul li ul li label input {
+header ul li ul li label input {
     margin-right: 10px;
 }
 
-nav ul li ul li:hover {
+header ul li ul li:hover {
     background-color: #E6E6E7;
     width: 100%;
 }
@@ -81,14 +140,17 @@ label {
 }
 
 h1 {
-    margin: 1%;
+    color: white;
     font-size: x-large;
     margin-bottom: 5%;
+    background: rgba(6, 24, 61, 0.7) none repeat scroll 0% 0%;
+    padding-bottom: 5%;
+    padding: 5%;
 }
 
 main ul li {
     list-style: none;
-    display: inline;
+    float: left;
     margin: auto;
 }
 
@@ -96,17 +158,14 @@ main ul li img {
     width: 100%;
 }
 
-nav img {
-    width: 50px;
+header img {
+    width: 12%;
     float: left;
+    margin: 3% 0% 0% 3%;
+
 }
 
-body section {
-    background-color: #24B5C9;
-    padding: 3% 0% 3% 0%;
-}
-
-section fieldset {
+fieldset {
     background-color: #06183D;
     margin: 0% 3% 2% 3%;
     color: white;
@@ -117,12 +176,17 @@ li {
     list-style: none;
 }
 
-section form fieldset ul {
+form fieldset ul {
     display: grid;
 }
 
 h3 {
     margin: 5% 0% 5% 0%;
+}
+
+h2 {
+    text-align: center;
+    margin: 3%;
 }
 
 .tab {
@@ -131,6 +195,7 @@ h3 {
 }
 
 /* Style the buttons that are used to open the tab content */
+
 .tab button {
     background-color: inherit;
     float: left;
@@ -143,29 +208,284 @@ h3 {
 }
 
 /* Change background color of buttons on hover */
+
 .tab button:hover {
     background-color: #ddd;
     width: 50%;
 }
 
 /* Create an active/current tablink class */
+
 .tab button.active {
     background-color: #06183D;
     color: white;
     width: 50%;
-     text-decoration: underline #eecd4a;;
+    text-decoration: underline #eecd4a;
+    ;
 }
 
 /* Style the tab content */
+
 .tabcontent {
     padding: 6px 12px;
 
 }
 
-section form fieldset div fieldset label{
+form fieldset div fieldset label {
     display: contents;
 }
 
 output {
     display: inherit;
+}
+
+form {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: #24B5C9;
+}
+
+main ul li img {
+    width: 100%;
+    height: 40%;
+
+}
+
+/* // https://www.cssportal.com/style-input-range/ */
+
+input[type=range] {
+    height: 10%;
+    -webkit-appearance: none;
+    margin: 15px 0;
+    width: 100%;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #FFFFFF;
+    border-radius: 9px;
+    border: 1px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #000000;
+    height: 30px;
+    width: 15px;
+    border-radius: 10px;
+    background: #FBDD0F;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -13px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #FFFFFF;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #FFFFFF;
+    border-radius: 9px;
+    border: 1px solid #000000;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #000000;
+    height: 30px;
+    width: 15px;
+    border-radius: 10px;
+    background: #FBDD0F;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 18px;
+    box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 18px;
+    box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #000000;
+    height: 30px;
+    width: 15px;
+    border-radius: 10px;
+    background: #FBDD0F;
+    cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #FFFFFF;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #FFFFFF;
+}
+
+.afbeelding-home {
+    height: 20em;
+    background-image: url('../images/achtergrond1.jpg');
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 2.5em;
+}
+
+/* https://codepen.io/joostf/pen/JeQpYd */
+
+article {
+    max-width: 19em;
+    background: white;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 5fr 0fr;
+    grid-gap: 0;
+    align-items: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 0.5em;
+    border-color: currentcolor rgb(232, 232, 232) rgb(232, 232, 232);
+    border-style: none solid solid;
+    border-width: 0px 1px 1px;
+    border-image: none 100% / 1 / 0 stretch;
+    min-width: 18em;
+    min-height: 31em;
+}
+
+article header {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+article h3 {
+    margin: 0;
+    padding: .5em 1rem;
+    border-radius: 1rem 1rem 0 0;
+    color: rgb(74, 73, 73);
+    font-size: 1.75em;
+    font-weight: normal;
+    grid-column: 1 / 2;
+    grid-row: 2 / 2;
+    max-width: 8em;
+    font-family: "test3";
+}
+
+main section article img {
+    max-width: 100%;
+    height: 100%;
+    grid-column: 1 / 3;
+}
+
+main section {
+    display: flex;
+    justify-content: center;
+}
+
+
+article p {
+    grid-column: 1 / 2;
+    padding: 0 1rem;
+}
+
+article button {
+    margin: 2em 1em 1em 1em;
+    font-size: .85em;
+    font-family: inherit;
+    color: rgb(85, 86, 90);
+    border-radius: .2em;
+    padding: .5em 1em;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(255, 230, 0);
+    box-shadow: rgb(222, 194, 4) 0px 2px 0px 0px, rgba(0, 0, 0, 0.2) 0px 3px 2px 0px;
+    transition: all .5s;
+    grid-column: 1 / 2;
+    text-transform: uppercase;
+}
+
+.star1 {
+    grid-row: 2 / 2;
+    display: flex;
+    height: 2em;
+    margin-left: 8em;
+}
+
+.star {
+    grid-row: 2 / 2;
+    display: flex;
+    height: 2em;
+    margin-left: 85%;
+}
+
+.left {
+    margin-left: 74%;
+}
+
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.info {
+    margin-top: 2em;
+}
+
+.more {
+    margin: 2em 1em 1em 1em;
+    font-size: .85em;
+    font-family: inherit;
+    color: white;
+    border-radius: .2em;
+    padding: .5em 1em;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(36, 181, 201);
+    box-shadow: rgb(30, 150, 166) 0px 2px 0px 0px, rgba(0, 0, 0, 0.2) 0px 3px 2px 0px;
+    transition: all .5s;
+    grid-column: 1 / 2;
+    text-transform: uppercase;
+    width: 90%;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
 }
