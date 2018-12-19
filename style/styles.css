@@ -256,8 +256,10 @@ main ul li img {
 input[type=range] {
     height: 10%;
     -webkit-appearance: none;
-    margin: 15px 0;
-    width: 100%;
+    height: 10%;
+-webkit-appearance: none;
+width: 90%;
+margin: 1em 0em 1em 2em;
 }
 
 input[type=range]:focus {
@@ -411,6 +413,7 @@ main section article img {
 main section {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 
@@ -468,7 +471,9 @@ article button {
 }
 
 .more {
-    margin: 2em 1em 1em 1em;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
     font-size: .85em;
     font-family: inherit;
     color: white;
@@ -478,14 +483,6 @@ article button {
     font-weight: bold;
     background-color: rgb(36, 181, 201);
     box-shadow: rgb(30, 150, 166) 0px 2px 0px 0px, rgba(0, 0, 0, 0.2) 0px 3px 2px 0px;
-    transition: all .5s;
-    grid-column: 1 / 2;
     text-transform: uppercase;
     width: 90%;
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
 }
