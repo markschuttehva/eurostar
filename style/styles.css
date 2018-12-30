@@ -1,6 +1,7 @@
 @font-face {
     font-family: "test1";
-    src: url("/fonts/aspw-hv.woff2") format("woff2");
+    src: url('/fonts/aspw-hv.ttf')  format('truetype')
+    , url("/fonts/aspw-hv.woff2") format("woff2");
 }
 
 @font-face {

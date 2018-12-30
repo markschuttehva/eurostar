@@ -73,7 +73,7 @@ function zoeken(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js 
- voor het hamburger menu dat ze ook gebruiken op de eurostar pagina*/
+ voor het hamburger menu dat ze ook gebruiken op de eurostar pagina*/  
 function myFunction(x) {
     x.classList.toggle("change");
 }
