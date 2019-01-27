@@ -1,10 +1,8 @@
 function resultaten() {
-
     /* roept functie op vanuit javascript
     maak een functie waarmee je door de checkboxes loopt
     maak een functie waarmee je kunt zien welke checkboxes aan staan            
     toon het resultaat */
-
 
     var inputGedeprimeerd = document.querySelector("input[name='Gedeprimeerd']");
     var inputVerliefd = document.querySelector("input[name='Verliefd']");
@@ -17,6 +15,7 @@ function resultaten() {
     //Array van de labels
     var textresultaat = "";
     var checkboxes = [inputGedeprimeerd, inputVerliefd, inputHoopvol, inputDruk, inputBoos, inputJaloers, inputRustig, inputEnergiek];
+
 
     //            console.log("gedeprimeerd?",inputGedeprimeerd.checked, inputGedeprimeerd.name);
     //            console.log("verliefd?",inputVerliefd.checked, inputVerliefd.name);
@@ -41,13 +40,19 @@ function resultaten() {
             //document.getElementById("wordcount").value = s.split(' ').length;
             console.log(s.split(' ').length);
 
-            document.getElementById("results").textContent = "Resultaat" + textresultaat;
+            document.getElementById("results").textContent = "Resultaat voor:" + textresultaat;
             var aantal = s.split(' ').length;
             if (aantal == 8) {
                 document.getElementById("results").textContent = "Alle verhalen";
             }
+            console.log(document.getElementById("results"));
+            var element = document.getElementById("results");
+            element.classList.add("kaas");
+                    
+            
         }
     }
+
 }
 resultaten();
 
@@ -72,8 +77,58 @@ function zoeken(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
-/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js 
- voor het hamburger menu dat ze ook gebruiken op de eurostar pagina*/  
-function myFunction(x) {
-    x.classList.toggle("change");
+
+
+/* scroll naar element */
+// Select all links with hashes
+$('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function (event) {
+        // On-page links
+        if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+            location.hostname == this.hostname
+        ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000, function () {
+                    // Callback after animation
+                    // Must change focus!
+                    var $target = $(target);
+                    $target.focus();
+                    if ($target.is(":focus")) { // Checking if the target was focused
+                        return false;
+                    } else {
+                        $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                        $target.focus(); // Set focus again
+                    };
+                });
+            }
+        }
+    });
+
+// scroll weer naar boven bij het verhaal
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 2) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }

@@ -1,33 +1,10 @@
-@font-face {
-    font-family: "test1";
-    src: url('/fonts/aspw-hv.ttf') format('truetype'), url("/fonts/aspw-hv.woff2") format("woff2");
-}
+@import url("https://use.typekit.net/klm5qqw.css");
 
-@font-face {
-    font-family: "test2";
-    src: url("/fonts/aspw-lt.woff2") format("woff2");
-}
+/* https://css-tricks.com/snippets/jquery/smooth-scrolling */
 
-@font-face {
-    font-family: "test3";
-    src: url("/fonts/aspw-rg.woff2") format("woff2");
+html {
+    scroll-behavior: smooth;
 }
-
-@font-face {
-    font-family: "test4";
-    src: url("/fonts/pemw-lt.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "test5";
-    src: url("/fonts/pemw-md.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "test6";
-    src: url("/fonts/pemw-rg.woff2") format("woff2");
-}
-
 
 * {
     margin: 0;
@@ -36,116 +13,100 @@
 
 body {
     background-color: white;
+    transition: 0.5s;
 }
 
 /*navigatie*/
 
-/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js 
- voor het hamburger menu dat ze ook gebruiken op de eurostar pagina*/
-
-.container {
-    grid-template-columns: 5fr 0fr;
-    grid-gap: 0;
-    display: inline-block;
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    padding-top: 1em;
-}
-
-.bar1,
-.bar2,
-.bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #fff;
-    margin: 0em 1em 0.35em 1em;
-    transition: 0.4s;
-}
-
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-
 header {
     width: 100%;
-    height: 60px;
+    height: 3.5em;
     background-color: #06183d;
+    position: fixed;
+    z-index: 1;
 }
 
 header p {
     color: #eecd4a;
-    font-size: 24px;
-    font-family: fantasy;
+    font-size: 2em;
+    font-family: gill-sans-nova, sans-serif;
     display: inline-block;
     grid-row: 2 / 2;
     grid-column: 2 / 2;
-    margin-bottom: -1.5em;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    margin: 0.1em;
+    margin-left: 40%;
 }
 
-header ul {
-    float: left;
+section p {
+    padding: 5%;
+    font-family: gill-sans-nova, sans-serif;
 }
 
-header ul li {
-    float: left;
-    list-style: none;
-    position: relative;
+section h2 {
+    margin: 0em 0em 0em 5%;
+    color: white;
+    font-family: gill-sans-nova, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
 }
 
-header ul li a {
-    display: block;
-    color: #eecd4a;
-    font-size: 14px;
-    font-family: fantasy;
-    padding: 22px 14px;
+section form div div li label {
+    width: 16em;
+}
+
+.tweede {
+    margin: 0em 0em 1em 5%;
+}
+
+.sorteer {
+    padding-top: 1em;
+    margin: 0em 0em 1em 1em;
+}
+
+.buttons {
+    margin: 0em 0em 0em 5%;
+    font-size: 1em;
+    font-family: gill-sans-nova, sans-serif;
+    color: rgb(85, 86, 90);
+    border-radius: .2em;
+    padding: .5em 1em;
+    font-weight: bold;
+    background-color: rgb(255, 230, 0);
+    text-transform: uppercase;
     text-decoration: none;
-}
-
-header ul li ul {
-    display: none;
-    position: absolute;
-    background-color: #06183d;
-}
-
-header ul li:hover ul {
-    display: block;
-}
-
-header ul li ul li label {
-    display: inline-flex;
-    padding: 15px 10px;
-    color: #eecd4a;
-}
-
-header ul li ul li label input {
-    margin-right: 10px;
-}
-
-header ul li ul li:hover {
-    background-color: #E6E6E7;
-    width: 100%;
+    text-align: left;
 }
 
 label {
     display: block;
+    padding: 1em 2em;
+    border-bottom: 0.1em solid;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 1em;
 }
 
 .nietzichtbaar {
     display: none;
 }
 
-.arrow {
-    width: 20px;
-}
-
 h1 {
     color: white;
-    font-size: x-large;
     margin-bottom: 5%;
     background: rgba(6, 24, 61, 0.7) none repeat scroll 0% 0%;
     padding-bottom: 5%;
     padding: 5%;
+    font-family: gill-sans-nova, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: calc(0.9);
 }
 
 main ul li {
@@ -159,80 +120,25 @@ main ul li img {
 }
 
 header img {
-    width: 12%;
-    float: left;
-    margin: 3% 0% 0% 3%;
+    width: 3em;
+    float: right;
+    margin-right: 6em;
 
-}
-
-fieldset {
-    background-color: #06183D;
-    margin: 0% 3% 2% 3%;
-    color: white;
-    border-radius: 5px;
 }
 
 li {
     list-style: none;
 }
 
-form fieldset ul {
-    display: grid;
-}
-
 h3 {
     margin: 5% 0% 5% 0%;
+    font-family: gill-sans-nova, sans-serif;
 }
 
 h2 {
     text-align: center;
+    font-family: gill-sans-nova, sans-serif;
     margin: 3%;
-}
-
-.tab {
-    overflow: hidden;
-    background-color: #fff;
-}
-
-/* Style the buttons that are used to open the tab content */
-
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    width: 50%;
-}
-
-/* Change background color of buttons on hover */
-
-.tab button:hover {
-    background-color: #ddd;
-    width: 50%;
-}
-
-/* Create an active/current tablink class */
-
-.tab button.active {
-    background-color: #06183D;
-    color: white;
-    width: 50%;
-    text-decoration: underline #eecd4a;
-    ;
-}
-
-/* Style the tab content */
-
-.tabcontent {
-    padding: 6px 12px;
-
-}
-
-form fieldset div fieldset label {
-    display: contents;
 }
 
 output {
@@ -240,9 +146,11 @@ output {
 }
 
 form {
-    padding-top: 3%;
-    padding-bottom: 3%;
-    background-color: #24B5C9;
+    margin: 3em auto 3em auto;
+    background: #384664;
+    border-radius: 0.2em;
+    height: 12.5em;
+    max-width: 71em;
 }
 
 main ul li img {
@@ -251,114 +159,18 @@ main ul li img {
 
 }
 
-/* // https://www.cssportal.com/style-input-range/ */
-
-input[type=range] {
-    height: 10%;
-    -webkit-appearance: none;
-    height: 10%;
-    -webkit-appearance: none;
-    width: 90%;
-    margin: 1em 0em 1em 2em;
+.blauw {
+    height: 0.7em;
+    background-color: #24B5C9;
 }
 
-input[type=range]:focus {
-    outline: none;
+.zoeken {
+    padding-top: 0.7em;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 6px;
-    cursor: pointer;
-    animate: 0.2s;
-    box-shadow: 0px 0px 0px #000000;
-    background: #FFFFFF;
-    border-radius: 9px;
-    border: 1px solid #000000;
-}
-
-input[type=range]::-webkit-slider-thumb {
-    box-shadow: 0px 0px 0px #000000;
-    border: 1px solid #000000;
-    height: 30px;
-    width: 15px;
-    border-radius: 10px;
-    background: #FBDD0F;
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -13px;
-}
-
-input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #FFFFFF;
-}
-
-input[type=range]::-moz-range-track {
-    width: 100%;
-    height: 6px;
-    cursor: pointer;
-    animate: 0.2s;
-    box-shadow: 0px 0px 0px #000000;
-    background: #FFFFFF;
-    border-radius: 9px;
-    border: 1px solid #000000;
-}
-
-input[type=range]::-moz-range-thumb {
-    box-shadow: 0px 0px 0px #000000;
-    border: 1px solid #000000;
-    height: 30px;
-    width: 15px;
-    border-radius: 10px;
-    background: #FBDD0F;
-    cursor: pointer;
-}
-
-input[type=range]::-ms-track {
-    width: 100%;
-    height: 6px;
-    cursor: pointer;
-    animate: 0.2s;
-    background: transparent;
-    border-color: transparent;
-    color: transparent;
-}
-
-input[type=range]::-ms-fill-lower {
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    border-radius: 18px;
-    box-shadow: 0px 0px 0px #000000;
-}
-
-input[type=range]::-ms-fill-upper {
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    border-radius: 18px;
-    box-shadow: 0px 0px 0px #000000;
-}
-
-input[type=range]::-ms-thumb {
-    margin-top: 1px;
-    box-shadow: 0px 0px 0px #000000;
-    border: 1px solid #000000;
-    height: 30px;
-    width: 15px;
-    border-radius: 10px;
-    background: #FBDD0F;
-    cursor: pointer;
-}
-
-input[type=range]:focus::-ms-fill-lower {
-    background: #FFFFFF;
-}
-
-input[type=range]:focus::-ms-fill-upper {
-    background: #FFFFFF;
-}
 
 .afbeelding-home {
-    height: 20em;
+    height: 23em;
     background-image: url('../images/achtergrond1.jpg');
     background-position: center;
     background-size: cover;
@@ -370,18 +182,15 @@ input[type=range]:focus::-ms-fill-upper {
 article {
     max-width: 19em;
     background: white;
-    padding: 0;
     display: grid;
     grid-template-columns: 5fr 0fr;
-    grid-gap: 0;
     align-items: center;
-    border-radius: 1rem;
+    border-radius: 0.5em 0.5em 0.3em 0.3em;
     overflow: hidden;
     margin: 0.5em;
     border-color: currentcolor rgb(232, 232, 232) rgb(232, 232, 232);
     border-style: none solid solid;
-    border-width: 0px 1px 1px;
-    border-image: none 100% / 1 / 0 stretch;
+    border-width: 0em 0.09em 0.09em;
     min-width: 18em;
     min-height: 31em;
 }
@@ -397,16 +206,22 @@ article h3 {
     border-radius: 1rem 1rem 0 0;
     color: rgb(74, 73, 73);
     font-size: 1.75em;
-    font-weight: normal;
+    font-weight: bold;
     grid-column: 1 / 2;
     grid-row: 2 / 2;
-    max-width: 8em;
-    font-family: "test3";
+    max-width: 16ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+main section a {
+    grid-column: 1 / 2;
 }
 
 main section article img {
-    max-width: 100%;
-    height: 100%;
+    width: 100%;
+    height: 12em;
     grid-column: 1 / 3;
 }
 
@@ -416,54 +231,47 @@ main section {
     flex-wrap: wrap;
 }
 
+body section h1 {
+    font-size: 2.5em;
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 0em;
+    padding: 5% 0% 0% 5%;
+}
+
 
 article p {
     grid-column: 1 / 2;
     padding: 0 1rem;
 }
 
-article button {
+article a button {
     margin: 2em 1em 1em 1em;
     font-size: .85em;
-    font-family: inherit;
+    font-family: gill-sans-nova, sans-serif;
     color: rgb(85, 86, 90);
     border-radius: .2em;
     padding: .5em 1em;
     border: none;
     font-weight: bold;
     background-color: rgb(255, 230, 0);
-    box-shadow: rgb(222, 194, 4) 0px 2px 0px 0px, rgba(0, 0, 0, 0.2) 0px 3px 2px 0px;
+    box-shadow: rgb(222, 194, 4) 0em 0.1em 0em 0em, rgba(0, 0, 0, 0.2) 0em 0.3em 0.2em 0em;
     transition: all .5s;
     grid-column: 1 / 2;
     text-transform: uppercase;
+    padding-left: 33%;
+
+    padding-right: 33%;
 }
 
-.star1 {
+.ster {
     grid-row: 2 / 2;
     display: flex;
     height: 2em;
     margin-left: 8em;
 }
 
-.star {
-    grid-row: 2 / 2;
-    display: flex;
-    height: 2em;
-    margin-left: 85%;
-}
-
 .left {
-    margin-left: 74%;
-}
-
-
-.change .bar2 {
-    opacity: 0;
-}
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+    margin-left: 76%;
 }
 
 .info {
@@ -475,78 +283,384 @@ article button {
     text-align: center;
     display: block;
     font-size: .85em;
-    font-family: inherit;
+    font-family: gill-sans-nova, sans-serif;
     color: white;
     border-radius: .2em;
     padding: .5em 1em;
     border: none;
     font-weight: bold;
     background-color: rgb(36, 181, 201);
-    box-shadow: rgb(30, 150, 166) 0px 2px 0px 0px, rgba(0, 0, 0, 0.2) 0px 3px 2px 0px;
+    box-shadow: rgb(30, 150, 166) 0em 0.1em 0em 0em, rgba(0, 0, 0, 0.2) 0em 0.3em 0.2em 0em;
     text-transform: uppercase;
     width: 90%;
 }
 
-@media only screen and (min-width: 800px) {
-    body fieldset fieldset {
-        display: inline-flex;
-    }
-
-    body fieldset legend {
-        padding-right: 5em;
-    }
-}
-
-.titel1,
-.titel2 {
-    background-color: black;
-    margin-bottom: 0%;
-    display: inline-flex;
-    padding: 2em 0% 1em 0%;
-}
-
-.titel1 {
-    color: #919191;
-}
-
-.titel2 {
-    color: #474747;
-}
-
 .black {
-    height: 100%;
-    width: 100%;
     background-color: black;
-    text-align: center;
-        overflow: hidden;
-    position: relative;
+    justify-content: center;
 }
 
-.verhaal {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    color: white;
-    max-width: 22em;
+/* https://www.youtube.com/watch?v=C8paSmVFsVE */
+
+.verhaal,
+.titel {
+    max-width: 90vh;
     margin: auto;
-    margin-top: 1em;
-    line-height: 3;
+    font-size: 2em;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    position: relative;
+    background-repeat: no-repeat;
+    animation: animate 6s linear infinite;
+    background-size: 80%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding-bottom: 0%;
+}
 
+@media only screen and (min-width: 800px) {
+    .titel {
+        font-size: 4em;
+        margin: 0em 0em 0em 20%;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+.verhalenopreis {
+    padding: 1.4em;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url(../images/bg1.jpg);
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+/* http://www.iamrohit.in/create-simple-star-rating-using-pure-css-html-radio-button/ */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:500,100,300,700,400);
+div.stars {
+    width: 100%;
+}
+
+input.star {
+    display: none;
+}
+
+label.star {
+    padding: 0.2em;
+    font-size: 2.3em;
+    color: #444;
+    transition: all .2s;
+    font-weight: 900;
+    border-bottom: none;
+}
+
+input.star:checked ~ label.star:before {
+    content: '\f005';
+    color: #FD4;
+    transition: all .25s;
+    font-weight: 900;
+}
+
+label.star:hover {
+    transform: rotate(-15deg) scale(1.3);
+    font-weight: 900;
+}
+
+label.star:before {
+    content: '\f006';
+    font-family: FontAwesome;
+    font-weight: 900;
+}
+
+.review {
+    color: white;
+    background: black;
+    font-family: gill-sans-nova, sans-serif;
+    font-weight: 400;
+    margin: 0em;
+    text-transform: none;
+    display: flex;
+    justify-content: center;
+}
+
+.black1 {
+    justify-content: center;
+    background-color: black;
+    display: flex;
+    margin-bottom: 3em;
+}
+
+/* https://css-tricks.com/recreating-the-twitter-heart-animation/ */
+
+[id='toggle-heart'] {
     position: absolute;
-    top: 5em;
-    bottom: 0px;
-    left: 0px;
-    right: -15px;
-    overflow: scroll;
-    overflow-x: hidden;
-    
+    left: -100vw;
+    float: right;
+
 }
 
-::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
+[for='toggle-heart'] {
+    color: #e2264d;
+    display: inline;
+    font-size: 5em;
+    border-bottom: none;
+    cursor: pointer;
+    padding: 0em;
+    float: right;
+    top: 0em;
 }
-/* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
+
+@keyframes heart {
+    0%,
+    17.5% {
+        font-size: 0;
+    }
+}
+
+[id='toggle-heart']:checked + label {
+    will-change: font-size;
+    animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+}
+
+.presentatie1 {
+    background-color: rgb(251, 221, 15);
+    width: 100vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    height: 90vh;
+    background-image: url(../images/website%20presentatie%20achtergrond.png);
+}
+
+/* Voor de nachtmodus
+https://www.youtube.com/watch?v=PPhCJewgI4Y&feature=youtu.be&fbclid=IwAR1iXInXHXLBgdHLuClzvxQ7NrQbCDYBZv-bPkBX6O98c_m8th_vg_SfuXI */
+
+.toggle {
+    position: absolute;
+    top: 0.9em;
+    right: 1.5em;
+    background: #06183d;
+    ;
+    border: 0.15em solid rgb(255, 230, 0);
+    ;
+    width: 3.5em;
+    height: 1.5em;
+    cursor: pointer;
+    border-radius: 2em;
+    transition: 0.5s;
+}
+
+.toggle:before {
+    content: '';
+    position: absolute;
+    top: 0.1em;
+    left: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background: rgb(255, 230, 0);
+    ;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.toggle.active {
+    background: yellow;
+    border: 0.15em solid #fff;
+}
+
+.toggle.active:before {
+    left: 2.1em;
+    background: #06183d;
+}
+
+body.night {
+    background: #00151f;
+}
+
+/* buttons genre */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    z-index: 1;
+    position: absolute;
+}
+
+.uitlijning {
+    margin-left: 1.5em;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgb(222, 194, 4);
+}
+
+.knoppen1 {
+    color: rgb(148, 148, 148);
+    margin: 0em 0em 0em 1.5em;
+    font-size: 1em;
+    font-family: gill-sans-nova, sans-serif;
+    border-radius: .2em;
+    padding: .5em 1em;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: left;
+    width: 22.5em !important;
+    height: 4.3em;
+}
+
+.knoppen {
+    color: rgb(148, 148, 148);
+    font-size: 1em;
+    font-family: gill-sans-nova, sans-serif;
+    border-radius: .2em;
+    padding: .5em 1em;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: left;
+    width: 22.5em !important;
+    height: 4.3em;
+}
+
+.kaas {
+    animation: type 3s;
+    overflow: hidden;
+}
+
+@keyframes type {
+    0% {
+        margin-bottom: 2em;
+        letter-spacing: 2em;
+    }
+
+    30% {
+        margin-bottom: 6em;
+    }
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 799px) {
+
+    .dropdown {
+        margin-top: 0.15em;
+        display: block;
+    }
+
+    form {
+        width: 22em;
+        height: 20em;
+    }
+
+    .knoppen1,
+    .knoppen {
+        margin: 0em 0em 0em 1em;
+        width: 20em !important;
+    }
+
+    .uitlijning {
+        margin: 0em;
+    }
+
+    header p {
+        margin-left: 29%;
+    }
+
+    .stars form {
+        height: 5em;
+    }
+
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1199px) {
+    .dropdown {
+        margin-top: 0.15em;
+        display: block;
+    }
+
+    form {
+        width: 95%;
+        height: 20em;
+    }
+
+    .knoppen1,
+    .knoppen {
+        margin: 0em 0em 0em 1em;
+        width: 96.5% !important;
+    }
+
+    .dropdown-content {
+        margin: 0em 0em 0em 1em;
+    }
+
+    .stars form {
+        height: 5em;
+    }
+}
+
+.verhaal:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.groter:hover {
+    width: 4em;
+    margin-right: 5.6em;
 }

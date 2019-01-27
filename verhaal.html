@@ -2,6 +2,8 @@
 
 <head>
     <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <!-- voor de rating -->
     <script type="text/javascript" src="functions.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -9,25 +11,78 @@
     <link rel="stylesheet" type="text/css" href="style/styles.css">
 </head>
 
-<body>
-    <header>
-        <!-- /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js 
- voor het hamburger menu dat ze ook gebruiken op de eurostar pagina -->
-        <div class="container" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
+<body class="black">
+<header>
         <p>Eurostar verhalen</p>
+        <img src="images/heart.png" class="groter" alt="">
     </header>
-    <main class="black">
-       <h1 class="titel1">Lange</h1>
-       <h1 class="titel2"> Frans</h1>
-        <p class="verhaal">Uh, uh, dit is Lange Frans, uh, uh Daar gaan we dan... Drop die beat. Het is dinsdagochtend, zoveel februari Ik stap uit de bus, zonder veel bombarie Voor me slaapt mijn zoon, in z’n kinderwagen Voor hem zing ik dit lied, zonder koek van Larie Het regent, het miezert, het waait dat het een aard heeft De mensen in zichzelf gekeerd, kijk hoe ik er langs zweef Het is een grote, een grote, een grote gore bende, Vind je ’t gek dat mensen klagen om deze bak ellende Eén gore grote bouwput, dit is de woede die er leeft Dit is Lange Frans (Dat is mijn naam) Hij is op zoek naar Stijl-oe-fe-ningen (yo yo) Van Raymond Queneau (Ahuh ahuh, Koning van de Letteren Ik zal ze laten knetteren) O ja, ohohooo Voor ik in de bieb kom, houdt een vrouw mij tegen Wat is er wat zij wil, in de stromende regen? Ze vraagt mij: is dit wellicht het postkantoor Ik probeer m’n antwoord te wikken en te wegen Nee, zeg ik, het postkantoor zit hier niet meer En precies op dat moment, is het dat het tij keert Achter haar rijdt een auto pijlsnel van ons weg Precies op het moment dat ik het antwoord aan haar zeg Je kunt dus nu het beste naar de Raadhuisstraatje gaan Maar ze hoort het niet, ze rent bij mij vandaan Dit is Lange Frans (Dat is mijn naam) Hij is op zoek naar Stijl-oe-fe-ningen (yo yo) Van Raymond Queneau (Ahuh ahuh, Koning van de Letteren Ik zal ze laten knetteren) Ohohooooo Binnen zoek ik bij de Q, het Quutje van Queneau Ik dacht toen ik begon, dat boekie heb ik zo Maar dat valt dus tegen, want hoe ik zoek en zoek Ik vind een hele hoop, maar net nu niet dit boek Dus zoek ik snel online En hey, dat doet even pijn Volgens de computer is ie wel aanwezig Ik zoek iemand op, zijn wangen zijn wat vlezig Hij zoekt met me mee, maar vindt ook niet het bewuste boek Mail anders naar het magazijn, is het simpele verzoek Ik mail. En wacht op antwoord als Van Dale Volgens het mailtje dat ik krijg, is me dat even balen Ligt het boek waar het moet zijn Ja, ik kan wel zeggen, dat doet echt wel pijn... Dit is Lange Frans (Dat is mijn naam) Hij is op zoek naar Stijl-oe-fe-ningen (yo yo) Van Raymond Queneau (Ahuh ahuh, maar het boek is zoek) Dan vindt hij op het plein (Aha, op het plein) Het plein van Bos en Lommer (Ver van Diemen Zuid) Echte babyschoentjes (Ahuh, ahuh, voor mijn zoon) O ja, echte babyschoentjes Hij was op zoek naar Stijl-oe-fe-ningen Maar vindt dus babyschoentjes Ahuh. Dit is het land van Lange Frans Ik zoek een boek, wie geeft mij een kans?</p>
+    <main style="padding-top: 4em; text-align: center;">
+        <input id="toggle-heart" type="checkbox" />
+        <label for="toggle-heart">❤</label>
+        <div style="width: calc(100% - 12vh);"><h1 class="titel">Lange Frans</h1></div>
+        <p class="verhaal">
+            Uh, uh, dit is Lange Frans, uh, uh Daar gaan we dan... Drop die beat.
+        </p>
+        <p class="verhaal">
+            Het is dinsdagochtend, zoveel februari Ik stap uit de bus, zonder veel bombarie Voor me slaapt mijn zoon, in z’n kinderwagen
+        </p>
+        <p class="verhaal"> Voor hem zing ik dit lied, zonder koek van Larie
+        </p>
+        <p class="verhaal"> Het regent, het miezert, het waait dat het een aard heeft De mensen in zichzelf gekeerd, kijk hoe ik er langs zweef
+        </p>
+        <p class="verhaal">
+            Het is een grote, een grote, een grote gore bende, Vind je ’t gek dat mensen klagen om deze bak ellende Eén gore grote bouwput, dit is de woede die er leeft
+        </p>
+        <p class="verhaal">
+            Dit is Lange Frans (Dat is mijn naam) Hij is op zoek naar Stijl-oe-fe-ningen (yo yo) Van Raymond Queneau (Ahuh ahuh, Koning van de Letteren Ik zal ze laten knetteren) O ja, ohohooo
+        </p>
+        <p class="verhaal">
+            Voor ik in de bieb kom, houdt een vrouw mij tegen Wat is er wat zij wil, in de stromende regen? Ze vraagt mij: is dit wellicht het postkantoor Ik probeer m’n antwoord te wikken en te wegen
+        </p>
+        <p class="verhaal">
+            Nee, zeg ik, het postkantoor zit hier niet meer En precies op dat moment, is het dat het tij keert Achter haar rijdt een auto pijlsnel van ons weg
+        </p>
+        <p class="verhaal">
+            Precies op het moment dat ik het antwoord aan haar zeg Je kunt dus nu het beste naar de Raadhuisstraatje gaan Maar ze hoort het niet, ze rent bij mij vandaan
+        </p>
+        <p class="verhaal">
+            Dit is Lange Frans (Dat is mijn naam) Hij is op zoek naar Stijl-oe-fe-ningen (yo yo) Van Raymond Queneau (Ahuh ahuh, Koning van de Letteren Ik zal ze laten knetteren) Ohohooooo
+        </p>
+        <p class="verhaal">
+            Binnen zoek ik bij de Q, het Quutje van Queneau Ik dacht toen ik begon, dat boekie heb ik zo Maar dat valt dus tegen, want hoe ik zoek en zoek
+        </p>
+        <p class="verhaal">
+            Ik vind een hele hoop, maar net nu niet dit boek Dus zoek ik snel online En hey, dat doet even pijn Volgens de computer is ie wel aanwezig
+
+        </p>
+        <p class="verhaal">Ik zoek iemand op, zijn wangen zijn wat vlezig Hij zoekt met me mee, maar vindt ook niet het bewuste boek Mail anders naar het magazijn, is het simpele verzoek Ik mail.
+        </p>
+        <p class="verhaal">
+            En wacht op antwoord als Van Dale Volgens het mailtje dat ik krijg, is me dat even balen Ligt het boek waar het moet zijn Ja, ik kan wel zeggen, dat doet echt wel pijn...
+        </p>
+        <p class="verhaal">
+            Dit is Lange Frans (Dat is mijn naam) Hij is op zoek naar Stijl-oe-fe-ningen (yo yo) Van Raymond Queneau (Ahuh ahuh, maar het boek is zoek) Dan vindt hij op het plein (Aha, op het plein) Het plein van Bos en Lommer (Ver van Diemen Zuid)
+        </p>
+        <p class="verhaal">
+            Echte babyschoentjes (Ahuh, ahuh, voor mijn zoon) O ja, echte babyschoentjes Hij was op zoek naar Stijl-oe-fe-ningen Maar vindt dus babyschoentjes Ahuh. Dit is het land van Lange Frans Ik zoek een boek, wie geeft mij een kans?
+        </p>
     </main>
+    <div class="stars">
+        <h1 class="review">Wat vond jij van dit verhaal?</h1>
+        <form action="" class="black1">
+            <input class="star star-1" id="star-1" type="radio" name="star" />
+            <label class="star star-1" for="star-1"></label>
+            <input class="star star-2" id="star-2" type="radio" name="star" />
+            <label class="star star-2" for="star-2"></label>
+            <input class="star star-3" id="star-3" type="radio" name="star" />
+            <label class="star star-3" for="star-3"></label>
+            <input class="star star-4" id="star-4" type="radio" name="star" />
+            <label class="star star-4" for="star-4"></label>
+            <input class="star star-5" id="star-5" type="radio" name="star" />
+            <label class="star star-5" for="star-5"></label>
+        </form>
+
+    </div>
 </body>
+
 </html>
-
-
-
-

@@ -11,159 +11,145 @@ https://www.youtube.com/watch?v=rgUp302f_lY
     <meta charset="utf-8">
     <title>Verhalen Eurostar</title>
     <link rel="stylesheet" type="text/css" href="style/styles.css">
+    <link rel="stylesheet" type="text/css" href="style/animate.css">
+    <!-- voor de fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/klm5qqw.css">
 </head>
 
 <body>
     <header>
-        <!-- /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js 
- voor het hamburger menu dat ze ook gebruiken op de eurostar pagina -->
-        <div class="container" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
         <p>Eurostar verhalen</p>
+        <img src="images/heart.png" style="groter" alt="">
+
+        <!-- voor de nachtmodus https://www.youtube.com/watch?v=PPhCJewgI4Y&feature=youtu.be&fbclid=IwAR1iXInXHXLBgdHLuClzvxQ7NrQbCDYBZv-bPkBX6O98c_m8th_vg_SfuXI -->
+        <div class="toggle"></div>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.toggle').click(function() {
+                    $('.toggle').toggleClass('active')
+                    $('body').toggleClass('night')
+                })
+            })
+
+        </script>
     </header>
-    <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_tabs 
-   Code gebruikt voor de tabs op de pagina (zodat filteren en gernes niet op 1 pagina staat)
-   -->
-    <form action="" id="genre" name="genre">
-        <fieldset>
-            <h2>Zoek een verhaal</h2>
-            <section class="tab">
-                <button class="tablinks" autofocus onclick="zoeken(event, 'Genre')">Genre</button>
-                <button class="tablinks" onclick="zoeken(event, 'Filter')">Filters</button>
-            </section>
-            <div id="Genre" class="tabcontent">
-                <fieldset>
-                    <legend>Genre </legend>
-                    <ul>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" class="checkbox" name="Gedeprimeerd" checked>Gedeprimeerd</label></li>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Verliefd" checked>Verliefd</label></li>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Hoopvol" checked>Hoopvol</label></li>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Druk" checked>Druk</label></li>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Boos" checked>Boos</label></li>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Jaloers" checked>Jaloers</label></li>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Rustig" checked>Rustig</label></li>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Energiek" checked>Energiek</label></li>
-                    </ul>
-                </fieldset>
-                <fieldset>
-                    <legend>Leesduur </legend>
-                    <p>Tijd:</p>
-                    <input type="range" name="ageInputName" id="ageInputId" value="24" min="1" step="1" max="20" oninput="ageOutputId.value = ageInputId.value + ' minuten'">
-                    <output name="ageOutputName" id="ageOutputId"></output>
-
-                </fieldset>
-                <fieldset>
-                    <legend>Sorteren op </legend>
-                    <input type="radio" id="populair" name="sort" value="populair" checked>
-                    <label for="populair">Populair</label>
-                    <input type="radio" id="tijdkort" name="sort" value="tijdkort"><label for="tijdkort">Tijd kort</label>
-                    <input type="radio" id="tijdlang" name="sort" value="tijdlang"><label for="tijdlang">Tijd lang</label>
-                    <input type="radio" id="rating" name="sort" value="rating"><label for="rating">Rating</label>
-                </fieldset>
+    <section class="verhalenopreis">
+        <h1>99 verhalen voor op reis</h1>
+        <h2>Op deze verhalenwebsite van Eurostar staan prachtig vormgegeven verhalen. </h2>
+        <h2 class="tweede">Super leuk om te lezen maar ook om te bekijken!</h2>
+        <!-- https://css-tricks.com/snippets/jquery/smooth-scrolling/ -->
+        <a href="#verhalen" class="buttons">verhalen</a>
+    </section>
+    <div class="blauw"></div>
+    <section class="zoeken">
+        <form action="" id="genre" name="genre">
+            <h2 class="sorteer">Sorteer op</h2>
+            <div class="dropdown">
+                <button class="knoppen1" style="width: 17em;">Genres</button>
+                <div class="dropdown-content uitlijning">
+                    <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" class="checkbox" name="Gedeprimeerd" checked>Gedeprimeerd</label></li>
+                    <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Verliefd" checked>Verliefd</label></li>
+                    <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Hoopvol" checked>Hoopvol</label></li>
+                    <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Druk" checked>Druk</label></li>
+                    <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Boos" checked>Boos</label></li>
+                    <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Jaloers" checked>Jaloers</label></li>
+                    <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Rustig" checked>Rustig</label></li>
+                    <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Energiek" checked>Energiek</label></li>
+                </div>
             </div>
-
-            <div id="Filter" class="tabcontent" style="display: none;">
-                <fieldset>
-                    <legend>Filters </legend>
-                    <ul>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" class="checkbox" name="Gedeprimeerd" >Gedeprimeerd</label></li>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Verliefd" >Verliefd</label></li>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Hoopvol" >Hoopvol</label></li>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Druk" >Druk</label></li>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Boos" >Boos</label></li>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Jaloers" >Jaloers</label></li>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Rustig" >Rustig</label></li>
-                        <li><label><input type="checkbox" onclick="resultaten();" id="checkbox" name="Energiek" >Energiek</label></li>
-                    </ul>
-                </fieldset><input type="submit" name="button" class="nietzichtbaar" value="Submit">
+            <div class="dropdown">
+                <button class="knoppen" style="width: 17em;">Tijd</button>
+                <div class="dropdown-content">
+                    <li><label><input type="checkbox"  id="checkbox" class="checkbox" name="Gedeprimeerd" checked>0 - 5 min</label></li>
+                    <li><label><input type="checkbox" id="checkbox" name="Verliefd" checked>5 - 10 min</label></li>
+                    <li><label><input type="checkbox" id="checkbox" name="Hoopvol" checked>10 - 15 min</label></li>
+                    <li><label><input type="checkbox" id="checkbox" name="Druk" checked>15+ min</label></li>
+                </div>
             </div>
-        </fieldset>
-    </form>
-
+            <div class="dropdown">
+                <button class="knoppen" style="width: 17em;">Sorteren op</button>
+                <div class="dropdown-content">
+                    <li><label><input type="radio" id="radio" class="checkbox" name="Naam" checked>Naam</label></li>
+                    <li><label><input type="radio" id="radio" name="Naam" >Duur</label></li>
+                    <li><label><input type="radio" id="radio" name="Naam">Rating</label></li>
+                </div>
+            </div>
+        </form>
+    </section>
     <section class="afbeelding-home">
-        <h1 id="results">Alle verhalen</h1>
+        <h1 id="results" class="">Alle verhalen</h1>
+        <!-- maak hier een micro interactie van (eerst zie je geen tekst daarna wel) -->
     </section>
 
     <main>
         <section>
+            <a name="verhalen"></a>
             <article>
-                <img src="images/rust.png" alt="">
-                <h3>Rustig</h3>
+                <img src="images/verhaal1.png" alt="">
+                <h3>Het verhaal van Lange Frans</h3>
                 <h3 class="left">5</h3>
-                <img src="images/star.svg" alt="" class="star">
+                <img src="images/star.svg" alt="" class="ster">
                 <p>Paranoia is the irrational and persistent feeling that people are ‘out to get you’. or that you are the subject of persistent, intrusive attention by others. </p>
-                <p class="info">Genres: Gedeprimeerd, Verliefd, Hoopvol, Druk, Boos, Jaloers, Rustig</p>
-                <p>Tijd 20 min.</p>
-                <button>Lees meer</button>
-            </article>
-              <article>
-                <img src="images/sad.png" alt="">
-                <h3>Gedeprimeerd</h3>
-                <h3 class="left">3</h3>
-                <img src="images/star.svg" alt="" class="star">
-                <p>Paranoia is the irrational and persistent feeling that people are ‘out to get you’. or that you are the subject of persistent, intrusive attention by others. </p>
-                <p class="info">Genres: Gedeprimeerd</p>
-                <p>Tijd 10 min.</p>
-                <button>Lees meer</button>
+                <p class="info"><b>Genres:</b> Gedeprimeerd, Verliefd, Hoopvol, Druk, Boos, Jaloers, Rustig</p>
+                <p><b>Tijd</b> 20 min.</p>
+                <a href="verhaal.html"><button type="submit">Lees meer</button></a>
             </article>
             <article>
-                <img src="images/Hope.jpg" alt="">
-                <h3>Hoopvol</h3>
+                <img src="images/droom.JPG" alt="">
+                <h3>Droom</h3>
                 <h3 class="left">4</h3>
-                <img src="images/star.svg" alt="" class="star">
+                <img src="images/star.svg" alt="" class="ster">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, minima earum, quas error dolorum beatae, officiis labore eligendi totam incidunt, est! Minima odio excepturi alias. Omnis aperiam ea, quam eum.</p>
-                <p class="info">Genres: Hoopvol, Verliefd</p>
-                <p>Tijd 5 min.</p>
-                <button>Lees meer</button>
+                <p class="info"><b>Genres:</b> Hoopvol, Verliefd</p>
+                <p><b>Tijd</b> 5 min.</p>
+                <a href="verhaal.html"><button>Lees meer</button></a>
             </article>
             <article>
-                <img src="images/afbeelding.jpg" alt="">
-                <h3>Hier komt wat lange tekst</h3>
+                <img src="images/gefrustreerd2.JPG" alt="">
+                <h3>Gefrustreerd</h3>
                 <h3 class="left">5</h3>
-                <img src="images/star.svg" alt="" class="star">
+                <img src="images/star.svg" alt="" class="ster">
                 <p>Ik ben makelaar in koffi, en woon op de Lauriergracht No 37. Het is mijn gewoonte niet, romans te schrijven, of zulke dingen</p>
-                <p class="info">Genres: Energiek, Druk</p>
-                <p>Tijd 9 min.</p>
-                <button>Lees meer</button>
+                <p class="info"><b>Genres:</b> Energiek, Druk</p>
+                <p><b>Tijd</b> 9 min.</p>
+                <a href="verhaal.html"><button>Lees meer</button></a>
             </article>
-              <article>
-                <img src="images/afbeelding2.jpg" alt="">
-                <h3>Kort</h3>
+            <article>
+                <img src="images/mop.jpg" alt="">
+                <h3>Mop</h3>
                 <h3 class="left">1</h3>
-                <img src="images/star.svg" alt="" class="star">
+                <img src="images/star.svg" alt="" class="ster">
                 <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system. </p>
-                <p class="info">Genres: Gedeprimeerd, Rustig</p>
-                <p>Tijd 13 min.</p>
-                <button>Lees meer</button>
+                <p class="info"><b>Genres:</b> Gedeprimeerd, Rustig</p>
+                <p><b>Tijd</b> 13 min.</p>
+                <a href="verhaal.html"><button>Lees meer</button></a>
             </article>
-              <article>
-                <img src="images/afbeelding3.jpg" alt="">
-                <h3>Jaloers</h3>
+            <article>
+                <img src="images/poepen2.jpg" alt="">
+                <h3>Poepen</h3>
                 <h3 class="left">4</h3>
-                <img src="images/star.svg" alt="" class="star">
+                <img src="images/star.svg" alt="" class="ster">
                 <p>Deutsches Ipsum Dolor quo lucilius Autobahn at, adhuc laboramus sadipscing per Döner in mei ullum gloriatur.</p>
-                <p class="info">Genres: Hoopvol, Rustig</p>
-                <p>Tijd 17 min.</p>
-                <button>Lees meer</button>
+                <p class="info"><b>Genres:</b> Hoopvol, Rustig</p>
+                <p><b>Tijd</b> 17 min.</p>
+                <a href="verhaal.html"><button>Lees meer</button></a>
             </article>
-              <article>
-                <img src="images/afbeelding4.jpg" alt="">
-                <h3>Energiek</h3>
+            <article>
+                <img src="images/verliefd2.JPG" alt="">
+                <h3>Verliefd</h3>
                 <h3 class="left">2</h3>
-                <img src="images/star.svg" alt="" class="star">
+                <img src="images/star.svg" alt="" class="ster">
                 <p>自ハミ堂限ロミワ表申ムシ見7生んらンさ備栗オマ未学なずん芸打リ待景な期気成づどラ境一幕にざ本更がのなゆ人談ょへろば人点えご点輸荒衝よわを.</p>
-                <p class="info">Genres: Boos, Hoopvol, Jaloers</p>
-                <p>Tijd 30 min.</p>
-                <button>Lees meer</button>
+                <p class="info"><b>Genres:</b> Boos, Hoopvol, Jaloers</p>
+                <p><b>Tijd</b> 30 min.</p>
+                <a href="verhaal.html"><button>Lees meer</button></a>
             </article>
         </section>
 
         <button class="more">Laad meer</button>
     </main>
-
+    <script src="https://unpkg.com/popmotion/dist/popmotion.global.min.js"></script>
 </body>
 
 </html>
