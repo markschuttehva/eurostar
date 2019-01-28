@@ -85,6 +85,7 @@ label {
     display: block;
     padding: 1em 2em;
     border-bottom: 0.1em solid;
+    font-family: gill-sans-nova, sans-serif;
 }
 
 input[type="checkbox"],
@@ -237,7 +238,6 @@ body section h1 {
     margin-bottom: 0em;
     padding: 5% 0% 0% 5%;
 }
-
 
 article p {
     grid-column: 1 / 2;
@@ -524,7 +524,7 @@ body.night {
     background-color: rgb(255, 255, 255);
     text-decoration: none;
     text-align: left;
-    width: 22.5em !important;
+    width: 22.5em;
     height: 4.3em;
 }
 
@@ -537,7 +537,7 @@ body.night {
     background-color: rgb(255, 255, 255);
     text-decoration: none;
     text-align: left;
-    width: 22.5em !important;
+    width: 22.5em;
     height: 4.3em;
 }
 
@@ -573,7 +573,7 @@ body.night {
     .knoppen1,
     .knoppen {
         margin: 0em 0em 0em 1em;
-        width: 20em !important;
+        width: 20em;
     }
 
     .uitlijning {
@@ -586,6 +586,11 @@ body.night {
 
     .stars form {
         height: 5em;
+    }
+
+    .verhaal {
+        max-width: 30vh;
+        font-size: 1em;
     }
 
 }
@@ -604,7 +609,7 @@ body.night {
     .knoppen1,
     .knoppen {
         margin: 0em 0em 0em 1em;
-        width: 96.5% !important;
+        width: 96.5%;
     }
 
     .dropdown-content {
@@ -613,6 +618,11 @@ body.night {
 
     .stars form {
         height: 5em;
+    }
+
+    .verhaal {
+        max-width: 58vh;
+        font-size: 1.5em;
     }
 }
 
@@ -663,4 +673,41 @@ body.night {
 .groter:hover {
     width: 4em;
     margin-right: 5.6em;
+}
+
+.breedte {
+    width: calc(100% - 12vh);
+}
+
+.center {
+    padding-top: 4em;
+    text-align: center;
+}
+
+header div {
+    width: 16em;
+    height: 6em;
+    float: right;
+    background-color: #06183d;
+    text-align: center;
+    display: none;
+}
+
+.zichtbaar {
+    display: block;
+}
+
+header div a {
+    text-decoration: none;
+    font-size: xx-large;
+    color: white;
+    font-family: gill-sans-nova, sans-serif;
+}
+
+.stars div h2 {
+    color: white;
+}
+
+.vind {
+    display: none;
 }

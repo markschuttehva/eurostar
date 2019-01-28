@@ -12,14 +12,19 @@
 </head>
 
 <body class="black">
-<header>
+    <header>
         <p>Eurostar verhalen</p>
         <img src="images/heart.png" class="groter" alt="">
+        <div id="verborgen">
+            <a href="#" onclick="verberg();">Toegevoegd aan favorieten</a>
+        </div>
     </header>
-    <main style="padding-top: 4em; text-align: center;">
-        <input id="toggle-heart" type="checkbox" />
-        <label for="toggle-heart">❤</label>
-        <div style="width: calc(100% - 12vh);"><h1 class="titel">Lange Frans</h1></div>
+    <main class="center">
+        <input id="toggle-heart" onclick="toevoegen();" type="checkbox" />
+        <label for="toggle-heart" onclick="toevoegen();">❤</label>
+        <div class="breedte">
+            <h1 class="titel">Lange Frans</h1>
+        </div>
         <p class="verhaal">
             Uh, uh, dit is Lange Frans, uh, uh Daar gaan we dan... Drop die beat.
         </p>
@@ -69,7 +74,10 @@
     </main>
     <div class="stars">
         <h1 class="review">Wat vond jij van dit verhaal?</h1>
-        <form action="" class="black1">
+        <div>
+            <h2 id="sterr" class="vind">Bedankt voor je rating!</h2>
+        </div>
+        <form action="" class="black1" onclick="opgeslagen();">
             <input class="star star-1" id="star-1" type="radio" name="star" />
             <label class="star star-1" for="star-1"></label>
             <input class="star star-2" id="star-2" type="radio" name="star" />

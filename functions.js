@@ -48,8 +48,6 @@ function resultaten() {
             console.log(document.getElementById("results"));
             var element = document.getElementById("results");
             element.classList.add("kaas");
-                    
-            
         }
     }
 
@@ -116,19 +114,23 @@ $('a[href*="#"]')
         }
     });
 
-// scroll weer naar boven bij het verhaal
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 2) {
-    document.getElementById("myBtn").style.display = "block";
-  } else {
-    document.getElementById("myBtn").style.display = "none";
-  }
-}
-
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+function toevoegen() {
+    var vind = document.getElementById("verborgen");
+    vind.classList.add("zichtbaar");
+}
+
+function verberg() {
+    var none = document.getElementById("verborgen");
+    none.classList.remove("zichtbaar");
+}
+
+function opgeslagen() {
+    var ster = document.getElementById("sterr");
+    ster.classList.remove("vind")
 }
